@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\CourseList;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+/*
 Route::get('/', function () {
     return view('welcome');
 });
+*/
+
+Route::get('/', [CourseList::class, 'index']); // Class Add Controller
+Route::get('/', [CourseList::class, 'courseList']); // View Course Listing
+Route::get('/schedule', [CourseList::class, 'classIndex']); // View CalenderUI Page
+Route::get('/classschedule/{course_id}', [CourseList::class, 'classIndexShedule']);
