@@ -9,20 +9,17 @@
 </head>
 <body>
        <div class="context">
-               <h1>Course Listing</h1>
+               <h1>Course Search Listing</h1>
            <div class="search-add-classContainer">
                <div class="search-add-classContainer2">
-               <form action="/search" method="GET">
-                    <input type="text" name="search" placeholder="Search..">
-                         <input type="submit" class="searchBtn" id="searchBtn" value="Search">
-                 </form>
+               
                    </div>
                </div>
            <div class="bigContainer">
     <div class="sub-container">
     <div class="sub-container1">
         
-        @foreach ($files as $i )
+        @foreach ($posts as $i )
         <a href="/classschedule/{{ $i['course_id'] }}" name="title" class="button1"><div class="className">{{ $i -> title }}</div></a>
         
         @endforeach

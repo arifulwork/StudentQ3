@@ -105,7 +105,7 @@ div{
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: linear-gradient(90deg, ##755bea, #755bea);
+  background: linear-gradient(90deg, #755bea, #755bea);
 }
 
 /* Handle */

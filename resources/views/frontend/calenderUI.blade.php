@@ -37,15 +37,24 @@
                         <div class="modal-content">
                         <div class="modal-header">
                         <span class="close">&times;</span>
-                        <form action="" class="form-container">
+                        @if (session('status'))
+                        <h6 class="alert alert-success">{{ session('status') }}</h6>
+                    @endif
+                        <form action="{{ url('class-reservation') }}" class="form-container" method="POST">
+                            @csrf
                         <h1>Student Information</h1>
 
                         <label for="class-title" style="color:black;"><b>Student Name:</b></label>
-                        <input type="text" placeholder="Enter Your Name.." id="class-title" required><br>
+                        <input type="text" placeholder="Enter Your Name.." name="sname" id="class-title" required><br>
                         <br >
                         <label for="class-title" style="color:black;"><b>Student Email:</b></label>
-                        <input type="text" placeholder="Enter Your Email.." id="class-title" required>
-
+                        <input type="text" placeholder="Enter Your Email.." name="email" id="class-title" required>
+                        <br >
+                        <label for="class-title" style="color:black;"><b>Course 1:</b></label>
+                        <input type="text" placeholder="Enter Your Email.." name="courseone" id="class-title" required>
+                        <br >
+                        <label for="class-title" style="color:black;"><b>Course 2</b></label>
+                        <input type="text" placeholder="Enter Your Email.." name="coursetwo" id="class-title" required>
                         <div class="buttonAction" id="class-end-time">
                         <button type="submit" class="btn add" onclick="myFunction()">Confirm Select</button>
                         <button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>

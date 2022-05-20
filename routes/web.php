@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CourseList;
+use App\Http\Controllers\StudentController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -23,3 +24,7 @@ Route::get('/', [CourseList::class, 'index']); // Class Add Controller
 Route::get('/', [CourseList::class, 'courseList']); // View Course Listing
 Route::get('/schedule', [CourseList::class, 'classIndex']); // View CalenderUI Page
 Route::get('/classschedule/{course_id}', [CourseList::class, 'classIndexShedule']);
+
+Route::get('/search', [CourseList::class,'search']);  // SearchBox
+
+Route::post('/class-reservation', [StudentController::class, 'studentadd']); // StudentReservationSystem
