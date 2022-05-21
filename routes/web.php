@@ -28,3 +28,9 @@ Route::get('/classschedule/{course_id}', [CourseList::class, 'classIndexShedule'
 Route::get('/search', [CourseList::class,'search']);  // SearchBox
 
 Route::post('/class-reservation', [StudentController::class, 'studentadd']); // StudentReservationSystem
+
+
+
+
+Route::get('/select', [StudentController::class,'SelectSearch']);  
+
