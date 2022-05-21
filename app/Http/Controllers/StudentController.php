@@ -10,9 +10,9 @@ use App\Models\Subject;
 
 class StudentController extends Controller
 {
-    public function create()
+    public function firstreservation()
     {
-        return view('student.create');
+        return view('frontend.studentSelectOne');
     }
 
     
@@ -27,6 +27,20 @@ class StudentController extends Controller
 
        
         $student->save();
-        return redirect()->back()->with('status','');
+        return redirect()->back()->with('status','Done');
     }
+
+
+    public function testfunction(){
+
+        
+
+        $datas = Subject :: all();
+  
+        return view('frontend.studentSelectOne', ['datas' => $datas]);
+        
+
+     }
+
+
 }

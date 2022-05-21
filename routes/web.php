@@ -30,7 +30,7 @@ Route::get('/search', [CourseList::class,'search']);  // SearchBox
 Route::post('/class-reservation', [StudentController::class, 'studentadd']); // StudentReservationSystem
 
 
+Route::get('/firstreservtion', [StudentController::class, 'firstreservation']); // View CalenderUI Page
 
-
-Route::get('/select', [StudentController::class,'SelectSearch']);  
+Route::get('/firstreservtion', [StudentController::class,'testfunction']); // View Select
 

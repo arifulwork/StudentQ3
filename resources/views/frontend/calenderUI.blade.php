@@ -7,12 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="{{ asset('/assets/teacherClass2.css') }}">
 
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
 
-    
-    
 </head>
 <body>
   <div class="context">
@@ -26,72 +21,17 @@
                    <input type="text" name="search" placeholder="Search..">
                          <select name="classDetail" id="classDetail">
                             <option value="className">Class Name</option>
-                            <option value="date">Date</option>
-                            <option value="time">Time</option>
                          </select>
                         <input type="submit" name="searchBtn" id="searchBtn" value="Search">
-
-                        @if (session('status'))
-                        <h6 class="alert alert-success">{{ session('status') }}</h6>
-                    @endif
                    
                 </form>
                     <!-- Trigger/Open The Modal -->
-                   <button id="myBtn" class="addbtn">First Course Reservation</button>
+                    <form method="get" action="/firstreservtion">
+                  <button  id="myBtn" class="addbtn">Add New Class</button> 
+                </form>
                    </div>
                </div>
-                        <!-- The Modal -->
-                        <div id="myModal" class="modal">
-
-                        <!-- Modal content -->
-                        <div class="modal-content">
-                        <div class="modal-header">
-                        <span class="close">&times;</span>
-                        <form action="{{ url('class-reservation') }}" class="form-container" method="POST">
-
-                            @csrf
-                        <h1>Add New Classes</h1>
-
-                        <label for="class-title" style="color:black;"><b>Class Title:</b></label>
-                        <input type="text" name="sname" placeholder="Enter the class title.." id="class-title" required><br>
-
-                        <label for="class-title" style="color:black;"><b>Email:</b></label>
-                        <input type="email" name="email" placeholder="Enter the Email" id="class-title" required><br>
-
-                        <label for="class-seat" style="color:black;"><b> Course Name 1:</b></label>
-                        <select style="width: 200px" name="courseone"  id="nameid">
-                          <option></option>
-
-                          
-                          
-                            <option>Name</option>
-
-                           
-                        
-                        </select>
-
-                        
-  <br>
-  <br>
-  
-
                        
-
-                        <label for="class-seat" style="color:black;"><b> Class ID:</b></label>
-                        <input type="number" name ="subject_id" placeholder="Enter Class ID" id="class-seat" ><br>
-
-                        <div class="buttonAction" id="class-end-time">
-                        <button type="submit" class="btn add" onclick="myFunction()">Add</button>
-                        <button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
-                        </div>
-                        </form>
-                        </div>
-                        </div></div>
-                        <!-- if successful added pop out this message -->
-                        <div id="snackbar">Class has been successfully added.</div>
-
-
-                        
       
       
            <div class="bigContainer">
@@ -102,7 +42,12 @@
             <div class="className-dropdownIcon-container">
                 <div class="className">{{ $i -> title }}</div>
                 <div class="dropdown">
-                
+                <div class="dropdownIcon">
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                    <div class="dropdown-content">
+                        <a href="">Export Class Information</a>
+                    </div>
+                </div>
             </div>
             </div>
             <div class="big-date-time-container">
@@ -113,10 +58,10 @@
                 <div class="seat">10/30 seat</div>
             </div>
         </button>
+        
+        
         @endforeach
         
-        
-       
       
     </div>
     </div>
@@ -143,18 +88,6 @@
                 <li></li>
         </ul>
 </div>
-
-<script type="text/javascript">
-
-    $("#nameid").select2({
-          placeholder: "Select a Name",
-          allowClear: true
-      });
-
-      
-</script>
-
 </body>
 </html> 
-<script src="{{ asset('/assets/newClassForm.js') }}"></script>
-
+<script src="newClassForm.js"></script>
