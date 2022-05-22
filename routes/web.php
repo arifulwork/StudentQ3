@@ -35,4 +35,10 @@ Route::get('/firstreservtion', [StudentController::class, 'firstreservation']); 
 Route::get('/firstreservtion', [StudentController::class,'testfunction']); // View Select
 
 Route::post('/firstreservtion', [StudentController::class,'kitter'])->name('available.check');; // Email
+/* Second Subject Add */
+Route::post('/secondclass-reservation', [StudentController::class, 'secondstudentadd']); // StudentReservationSystem
+Route::get('/secondreservtion', [StudentController::class, 'secondreservtion']); // View CalenderUI Page
 
+Route::get('/secondreservtion', [StudentController::class,'testfunctionw']); // View Select
+
+Route::post('/secondreservtion', [StudentController::class,'kitters'])->name('eavailable.check');; // Email

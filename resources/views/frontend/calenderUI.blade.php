@@ -25,11 +25,19 @@
                         <input type="submit" name="searchBtn" id="searchBtn" value="Search">
                    
                 </form>
+               <br/>
                     <!-- Trigger/Open The Modal -->
                     <form method="get" action="/firstreservtion">
-                  <button  id="myBtn" class="addbtn">Add New Class</button> 
+                  <button  id="myBtn" class="addbtn">First Class</button> 
                 </form>
+            </form>
+            <!-- Trigger/Open The Modal -->
+            <form method="get" action="/secondreservtion">
+          <button  id="myBtn" class="addbtn">Second Class</button> 
+        </form>
+                
                    </div>
+                   
                </div>
                        
       
