@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Student;
 use App\Models\Course;
 use App\Models\Subject;
+use DB;
 
 class StudentController extends Controller
 {
@@ -40,6 +41,25 @@ class StudentController extends Controller
         return view('frontend.studentSelectOne', ['datas' => $datas]);
         
 
+     }
+
+     public function kitter(Request $request)
+     {
+      if($request->get('email'))
+      {
+       $email = $request->get('email');
+       $data = DB::table("students")
+        ->where('email', $email)
+        ->count();
+       if($data > 0)
+       {
+        echo 'not_unique';
+       }
+       else
+       {
+        echo 'unique';
+       }
+      }
      }
 
 

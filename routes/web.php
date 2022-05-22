@@ -34,3 +34,5 @@ Route::get('/firstreservtion', [StudentController::class, 'firstreservation']); 
 
 Route::get('/firstreservtion', [StudentController::class,'testfunction']); // View Select
 
+Route::post('/firstreservtion', [StudentController::class,'kitter'])->name('available.check');; // Email
+
