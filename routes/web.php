@@ -42,3 +42,8 @@ Route::get('/secondreservtion', [StudentController::class, 'secondreservtion']);
 Route::get('/secondreservtion', [StudentController::class,'testfunctionw']); // View Select
 
 Route::post('/secondreservtion', [StudentController::class,'kitters'])->name('eavailable.check');; // Email
+
+
+
+
+Route::get('/searchbox', [CourseList::class,'searchStudent']);  // SearchBox

@@ -13,16 +13,16 @@
   <div class="context">
       <div class="big-back-class-container">
            <div class="back-class-container">
-           <a href="teacherUI.html"><i class="fa-solid fa-circle-arrow-left"></i></a>
-               <h1>Class Schedule</h1></div></div>
+           <a href="/"><i class="fa-solid fa-circle-arrow-left"></i></a>
+               <h1>Search Class Schedule</h1></div></div>
       <div class="search-add-classContainer">
                <div class="search-add-classContainer2">
-                <form action="/searchbox" method="GET">
-                    <input type="text" name="search" placeholder="Search..">
+               <form>
+                   <input type="text" name="search" placeholder="Search..">
                          <select name="classDetail" id="classDetail">
                             <option value="className">Class Name</option>
                          </select>
-                         <input type="submit" class="searchBtn" id="searchBtn" value="Search">
+                        <input type="submit" name="searchBtn" id="searchBtn" value="Search">
                    
                 </form>
                <br/>
@@ -43,7 +43,7 @@
            <div class="bigContainer">
     <div class="sub-container">
     <div class="sub-container1">
-        @foreach ($data as $i )
+        @foreach ($posts as $i )
         <button class="button1">
             <div class="className-dropdownIcon-container">
                 <div class="className">{{ $i -> title }}</div>

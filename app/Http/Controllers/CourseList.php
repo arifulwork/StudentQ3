@@ -62,6 +62,22 @@ class CourseList extends Controller
             }
 
 
+            public function searchStudent(Request $request){
+            
+              $this-> validate($request,[
+                'search' => 'required'
+              ]);
+            
+              $search_txt = $request->search;
+
+              $posts = Subject:: orderBy('subject_id','desc')->where('title','like','%'.$search_txt.'%')->get();
+
+              
+            return view ('frontend.searchCourse',compact('posts'));
+            
+            }
+
+
 
 
 
