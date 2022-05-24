@@ -32,10 +32,8 @@
                 </form>
             </form>
             <!-- Trigger/Open The Modal -->
-            <form method="get" action="/secondreservtion">
-          <button  id="myBtn" class="addbtn">Second Class</button> 
-        </form>
-                
+            
+            
                    </div>
                    
                </div>
@@ -60,10 +58,11 @@
             </div>
             <div class="big-date-time-container">
                 <div class="date-time-container">
-                    <div class="class-date">Saturday, 29/1/22</div>
-                    <div class="class-time">7am - 9pm</div>
+                    <div class="class-name">Class ID: {{ $i -> subject_id }}</div> <br>
+                    <div class="class-date">Date: {{ $i -> date }}</div> <br>
+                      <div class="class-time">Time: {{ $i -> starttime }}- {{ $i -> endtime }}</div>
                 </div>
-                <div class="seat">10/30 seat</div>
+                <div class="seat">Seat:</div>
             </div>
         </button>
         
