@@ -13,7 +13,7 @@
   <div class="context">
       <div class="big-back-class-container">
            <div class="back-class-container">
-           <a href="teacherUI.html"><i class="fa-solid fa-circle-arrow-left"></i></a>
+           <a href="/"><i class="fa-solid fa-circle-arrow-left"></i></a>
                <h1>Class Schedule</h1></div></div>
       <div class="search-add-classContainer">
                <div class="search-add-classContainer2">
@@ -28,7 +28,7 @@
                <br/>
                     <!-- Trigger/Open The Modal -->
                     <form method="get" action="/firstreservtion">
-                  <button  id="myBtn" class="addbtn">First Class</button> 
+                  <button  id="myBtn" class="addbtn">Register here</button> 
                 </form>
             </form>
             <!-- Trigger/Open The Modal -->
@@ -51,18 +51,18 @@
                 <div class="dropdownIcon">
                     <i class="fa-solid fa-ellipsis-vertical"></i>
                     <div class="dropdown-content">
-                        <a href="">Export Class Information</a>
+                        
                     </div>
                 </div>
             </div>
             </div>
             <div class="big-date-time-container">
                 <div class="date-time-container">
-                    <div class="class-name">Class ID: {{ $i -> subject_id }}</div> <br>
+                    <div class="class-name">Group Name: {{ $i -> subject_id }}</div> <br>
                     <div class="class-date">Date: {{ $i -> date }}</div> <br>
                       <div class="class-time">Time: {{ $i -> starttime }}- {{ $i -> endtime }}</div>
                 </div>
-                <div class="seat">Seat:</div>
+                <div class="seat"></div>
             </div>
         </button>
         

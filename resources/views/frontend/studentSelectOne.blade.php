@@ -15,6 +15,7 @@
     
     <div class="d-flex flex-column justify-content-center w-100 h-100">
 	<div class="d-flex flex-column justify-content-center align-items-center">
+    
         @if (session('status'))
                 <h6 class="alert alert-success">{{ session('status') }}</h6>
             @endif
@@ -52,7 +53,7 @@
       </div>
 
       <div class="form-group row">
-        <label for="staticEmail" class="col-sm-3 col-form-label form-label">Class ID:</label>
+        <label for="staticEmail" class="col-sm-3 col-form-label form-label">Group Name:</label>
         <div class="col-sm-9">
           <input type="number"  class="form-control-plaintext form-label" name="subject_id" id="staticEmail" style="border:1px solid white; color:white;" value="">
         </div>

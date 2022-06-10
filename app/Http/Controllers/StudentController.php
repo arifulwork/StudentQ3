@@ -52,7 +52,7 @@ class StudentController extends Controller
        $data = DB::table("students")
         ->where('email', $email)
         ->count();
-       if($data > 0)
+       if($data > 1)
        {
         echo 'not_unique';
        }
@@ -94,7 +94,7 @@ class StudentController extends Controller
        $data = DB::table("secondstudents")
         ->where('email', $email)
         ->count();
-       if($data > 0)
+       if($data > 1)
        {
         echo 'not_unique';
        }
