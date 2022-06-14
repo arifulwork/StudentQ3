@@ -51,18 +51,18 @@
                 <div class="dropdownIcon">
                     <i class="fa-solid fa-ellipsis-vertical"></i>
                     <div class="dropdown-content">
-                        <a href="">Export Class Information</a>
+                        
                     </div>
                 </div>
             </div>
             </div>
             <div class="big-date-time-container">
                 <div class="date-time-container">
-                    <div class="class-name">Class ID: {{ $i -> subject_id }}</div> <br>
+                    <div class="class-name">Group Name: {{ $i -> subject_id }}</div> <br>
                     <div class="class-date">Date: {{ $i -> date }}</div> <br>
                       <div class="class-time">Time: {{ $i -> starttime }}- {{ $i -> endtime }}</div>
                 </div>
-                <div class="seat">Seat:</div>
+                <div class="seat"></div>
             </div>
         </button>
         

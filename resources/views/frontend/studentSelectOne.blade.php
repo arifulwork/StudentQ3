@@ -8,11 +8,12 @@
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/css/bootstrap.min.css" integrity="sha512-T584yQ/tdRR5QwOpfvDfVQUidzfgc2339Lc8uBDtcp/wYu80d7jwBgAxbyMh0a9YM9F8N3tdErpFI8iaGx6x5g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+    
 </head>
     
 <body>
     
-    
+  
     <div class="d-flex flex-column justify-content-center w-100 h-100">
 	<div class="d-flex flex-column justify-content-center align-items-center">
     
@@ -62,7 +63,7 @@
       
     
     <div class="btn-container">
-    <a href="calendarUI.html" class="cancel-Btn" style="text-decoration: none; text-align: center;">Cancel</a>
+    <a href="/" class="cancel-Btn" style="text-decoration: none; text-align: center;">Cancel</a>
     <button type="submit" id="register"  class="edit-Btn">Confirm Select</button>
     </div>
 </form>
